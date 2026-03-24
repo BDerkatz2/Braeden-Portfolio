@@ -2,6 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
+export default defineConfig(() => {
+  const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1]
+  const isGitHubActions = process.env.GITHUB_ACTIONS === 'true'
+  const base = process.env.VITE_BASE_PATH ?? (isGitHubActions && repositoryName ? `/${repositoryName}/` : '/')
+
+  return {
+    base,
+    plugins: [react()],
+  }
 })
