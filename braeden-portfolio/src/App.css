@@ -1,0 +1,197 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(17, 138, 178, 0.22), transparent 42%),
+    radial-gradient(circle at 10% 90%, rgba(255, 159, 28, 0.2), transparent 35%),
+    linear-gradient(140deg, #fff8eb 0%, #f8fcff 55%, #eef6ff 100%);
+  animation: rise-in 450ms ease-out;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  margin: 0 0 0.9rem;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero-copy {
+  margin: 1rem 0 0;
+  max-width: 46ch;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  animation: rise-in 500ms ease-out;
+}
+
+.project-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.meta-line {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-list li {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+  background: var(--chip);
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.button,
+.card-actions a,
+.project-section.links a,
+.back-link {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0.48rem 0.82rem;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  background: #fff;
+}
+
+.button:hover,
+.card-actions a:hover,
+.project-section.links a:hover,
+.back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(12, 41, 68, 0.12);
+}
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-header {
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  padding: 1.3rem;
+  background: linear-gradient(100deg, #fffdf7 0%, #f5fbff 100%);
+}
+
+.project-header h1 {
+  margin: 0 0 0.7rem;
+}
+
+.project-header p {
+  margin: 0;
+  max-width: 64ch;
+}
+
+.project-section {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.2rem;
+  background: var(--card);
+}
+
+.project-section h2 {
+  margin-top: 0;
+}
+
+.project-section ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.project-section.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.add-project-note,
+.not-found {
+  border: 1px dashed var(--line);
+  border-radius: 1rem;
+  padding: 1.1rem;
+  background: #ffffffc7;
+}
+
+.add-project-note h2,
+.not-found h1 {
+  margin-top: 0;
+}
+
+.add-project-note code {
+  background: var(--chip);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.35rem;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 1.4rem;
+    border-radius: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+}
