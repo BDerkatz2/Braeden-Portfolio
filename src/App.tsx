@@ -5,6 +5,7 @@ import { projects } from './data/projects'
 import { siteProfile } from './data/site'
 
 const siteName = siteProfile.siteTitle
+const emailHref = `mailto:${siteProfile.contactEmail}?subject=${encodeURIComponent('Portfolio inquiry')}`
 
 function normalizeRoute(route: string): string {
   const cleaned = route.trim().replace(/^#/, '').replace(/\/+$/, '')
@@ -92,7 +93,9 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
           <a href={siteProfile.linkedinUrl} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
-          <a href={`mailto:${siteProfile.contactEmail}`}>Email</a>
+          <a href={emailHref} title={siteProfile.contactEmail} aria-label={`Email ${siteProfile.contactEmail}`}>
+            {siteProfile.contactEmail}
+          </a>
         </nav>
       </header>
 
@@ -186,7 +189,7 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
               </ul>
               <div className="card-actions">
                 <InternalLink href={`/projects/${project.slug}`} className="button button-primary">
-                  View Project Page
+                  View Project
                 </InternalLink>
                 {project.liveUrl ? (
                   <a href={project.liveUrl} target="_blank" rel="noreferrer" className="button">
@@ -202,7 +205,7 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
         </main>
       </section>
 
-      <section className="section-block two-column-grid">
+      <section className="section-block">
         <div className="panel approach-panel">
           <p className="eyebrow">How I Work</p>
           <h2>Approach</h2>
@@ -215,19 +218,6 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
             ))}
           </div>
         </div>
-
-        <section className="add-project-note panel" aria-labelledby="add-project-heading">
-        <h2 id="add-project-heading">How To Add A New Project</h2>
-        <p>
-          Add one object to <code>src/data/projects.ts</code> with a unique
-          <code>slug</code>. The homepage and the project detail page are created
-          automatically.
-        </p>
-          <p>
-            The home page, technology filters, featured cards, and detail page sections
-            all update from that same file.
-          </p>
-        </section>
       </section>
     </>
   )
