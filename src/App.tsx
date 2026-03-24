@@ -188,7 +188,10 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
                 ))}
               </ul>
               <div className="card-actions">
-                <InternalLink href={`/projects/${project.slug}`} className="button button-primary">
+                <InternalLink
+                  href={`/projects/${project.slug}`}
+                  className="button button-primary view-project-link"
+                >
                   View Project
                 </InternalLink>
                 {project.liveUrl ? (

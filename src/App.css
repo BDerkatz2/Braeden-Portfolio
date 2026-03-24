@@ -77,6 +77,17 @@
   border-color: var(--accent);
 }
 
+.card-actions .view-project-link,
+.card-actions .view-project-link:visited,
+.card-actions .view-project-link:hover,
+.card-actions .view-project-link:focus-visible,
+.card-actions .view-project-link:active {
+  color: #fff;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  font-weight: 700;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.95fr);
@@ -387,7 +398,6 @@
 
 @media (max-width: 900px) {
   .hero,
-  .two-column-grid,
   .project-layout,
   .project-header {
     grid-template-columns: 1fr;
@@ -416,7 +426,6 @@
   .project-header,
   .project-sidebar,
   .project-section,
-  .add-project-note,
   .not-found {
     padding: 1rem;
   }
