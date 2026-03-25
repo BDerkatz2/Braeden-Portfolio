@@ -65,16 +65,33 @@
 }
 
 .button-primary {
-  background: var(--accent);
+  background: var(--accent, #1867c0);
   color: #fff;
-  border-color: var(--accent);
+  border-color: var(--accent, #1867c0);
+}
+
+.hero-actions .button-primary,
+.hero-actions .button-primary:link,
+.hero-actions .button-primary:visited,
+.hero-actions .button-primary:hover,
+.hero-actions .button-primary:focus-visible,
+.hero-actions .button-primary:active,
+.card-actions .button-primary,
+.card-actions .button-primary:link,
+.card-actions .button-primary:visited,
+.card-actions .button-primary:hover,
+.card-actions .button-primary:focus-visible,
+.card-actions .button-primary:active {
+  color: #fff;
+  background: var(--accent, #1867c0);
+  border-color: var(--accent, #1867c0);
 }
 
 .card-actions .button-primary,
 .card-actions .button-primary:visited {
   color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent, #1867c0);
+  border-color: var(--accent, #1867c0);
 }
 
 .card-actions .view-project-link,
@@ -83,8 +100,8 @@
 .card-actions .view-project-link:focus-visible,
 .card-actions .view-project-link:active {
   color: #fff;
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  background: var(--accent-strong, #0e4d95);
+  border-color: var(--accent-strong, #0e4d95);
   font-weight: 700;
 }
 
