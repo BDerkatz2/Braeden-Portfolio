@@ -194,14 +194,26 @@ function HomePage({ activeTechnology, onTechnologyChange }: HomePageProps) {
                 >
                   View Project
                 </InternalLink>
-                {project.liveUrl ? (
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="button">
-                    Open App
+                <div className="card-actions-secondary">
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="button button-secondary"
+                    >
+                      Open App
+                    </a>
+                  ) : null}
+                  <a
+                    href={project.repositoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button button-secondary"
+                  >
+                    Repository
                   </a>
-                ) : null}
-                <a href={project.repositoryUrl} target="_blank" rel="noreferrer">
-                  Repository
-                </a>
+                </div>
               </div>
             </article>
           ))}

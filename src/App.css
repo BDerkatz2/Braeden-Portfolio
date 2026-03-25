@@ -40,6 +40,7 @@
 
 .site-nav a,
 .button,
+.card-actions a,
 .project-actions a,
 .back-link,
 .text-link {
@@ -57,6 +58,7 @@
 
 .site-nav a:hover,
 .button:hover,
+.card-actions a:hover,
 .project-actions a:hover,
 .back-link:hover,
 .text-link:hover {
@@ -251,6 +253,9 @@
 }
 
 .featured-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   padding: 1rem;
 }
 
@@ -263,6 +268,8 @@
 
 .text-link {
   margin-top: 0.9rem;
+  align-self: flex-start;
+  font-weight: 600;
 }
 
 .projects-grid {
@@ -338,6 +345,37 @@
 
 .card-actions {
   margin-top: auto;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card-actions .button,
+.card-actions a {
+  min-height: 2.85rem;
+  width: 100%;
+  font-weight: 600;
+}
+
+.card-actions-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.button-secondary,
+.button-secondary:link,
+.button-secondary:visited,
+.button-secondary:hover,
+.button-secondary:focus-visible,
+.button-secondary:active {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--line);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background: rgba(244, 248, 252, 0.98);
 }
 
 .approach-panel {
@@ -427,6 +465,10 @@
 }
 
 @media (max-width: 720px) {
+  .card-actions-secondary {
+    grid-template-columns: 1fr;
+  }
+
   .site-header,
   .section-heading {
     flex-direction: column;
