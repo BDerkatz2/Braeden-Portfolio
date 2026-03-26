@@ -87,7 +87,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'weather-app',
-    name: 'Weather App',
+    name: 'Weather Pulse',
     tagline: 'Responsive weather app with neon styling, geolocation, and 7-day forecasting.',
     summary:
       'A frontend weather experience focused on clear state handling, modern styling, and fast access to local forecast information.',
