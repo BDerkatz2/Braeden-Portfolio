@@ -87,7 +87,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'weather-app',
-    name: 'Weather Pulse',
+    name: 'Weather App',
     tagline: 'Responsive weather app with neon styling, geolocation, and 7-day forecasting.',
     summary:
       'A frontend weather experience focused on clear state handling, modern styling, and fast access to local forecast information.',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     outcome:
       'This project turns a familiar app idea into a more polished frontend build with stronger visual direction and better state-driven UX.',
     repositoryUrl: 'https://github.com/BDerkatz2/Weather-App',
-    liveUrl: 'https://weather-jbal01t0a-bderkatz2s-projects.vercel.app/',
+    liveUrl: 'https://weather-app-nine-eta-50.vercel.app',
   },
   {
     slug: 'budget-tracker',
